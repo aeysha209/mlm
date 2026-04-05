@@ -1,0 +1,212 @@
+/*==========================
+registration Page start here
+==========================
+*/
+.input-container {
+  position: relative;
+  width: 300px; 
+  margin-bottom: 15px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;            
+  padding: 12px 8px 12px 8px;    
+  margin-bottom: 15px;
+  display: block;         
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  outline: none;         
+  transition: border 0.2s;
+}
+.form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: none;
+}
+
+input:focus {
+  border: 1px solid #555; 
+}
+
+.password-wrapper {
+  position: relative;
+  width: 300px; 
+}
+
+.password-toggle {
+  position: absolute;
+  right: 100px; 
+  top: 70%;
+  transform: translateY(-85%); 
+  cursor: pointer; 
+  color: #555; 
+}
+.icon-style {
+  position: absolute;
+  right: px;      
+  top: 55%;         
+  transform: translateY(-50%); 
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Container to keep the label and badge aligned */
+.label-container {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+  margin-bottom: 5px;
+}
+
+.text_heading{
+  font-weight: 700;
+  font-size: 14px;
+  color:#333333;
+  line-height: 18px;
+  margin-bottom: 5px;
+
+}
+.badge-must {
+  color: white;   
+  border-color:#d9534f;
+  background-color: #F24024;
+  border: 1px solid #d9534f;
+  padding: 2px 8px;        
+  border-radius: 3px;      
+  font-weight: bold;        
+  text-transform: lowercase;
+  line-height: 1;   
+  display:inline-block;
+  vertical-align: middle;  
+  margin-left: 6px;    
+  margin-bottom: 5px;
+  margin-right: 40px;  
+}
+.helper-text {
+  color: #888888; 
+  font-size: 12px; 
+  margin-top: 2px; 
+  display:block;
+  line-height:1.4;
+}
+.registration-form {
+  margin-top: 30px; 
+  font-size: 12px;
+}
+.agree{
+  font-weight: 400;
+  font-size: 14px;
+  color: #333333;
+}
+.form-check-input{
+background-color: #76356E;
+border-radius: 11px;
+}
+.submit_btn{
+    padding: 14px 50px;
+    border: 2px;
+    border-radius: 9999px;
+    border: 2px solid var(--Deep-Magenta-40, #8F5A89);
+    color: #8F5A89;
+    font-weight: 500px;
+    font-size: 16px;
+
+}
+
+.btn:hover{
+  border: 2px solid var(--Deep-Magenta-40, #8F5A89);
+}
+.cencle_btn{
+  padding: 14px 50px;
+    border: 2px;
+    border-radius: 9999px;
+    border: 2px solid var(--Deep-Magenta-40, #8F5A89);
+    color:black;
+    font-weight: 500px;
+    font-size: 16px;
+}
+     
+.Referral Code{
+  padding: 14px 50px;
+    border: 2px;
+    border-radius: 9999px;
+    border: 2px solid var(--Deep-Magenta-40, #8F5A89);
+    color:  #333333;
+    font-weight: 500px;
+    font-size: 16px;
+}
+.Reset_btn{
+  padding: 14px 50px;
+    border: 2px;
+    border-radius: 9999px;
+    border: 2px solid var(--Deep-Magenta-40, #8F5A89);
+    color:  #333333;
+    font-weight: 500px;
+    font-size: 16px;
+}
+
+/*==========================
+registration Page end here
+==========================
+*/
+
+
+/* 
+===================================
+Login Page starts here
+=================================== 
+*/
+
+.buttonlogin {
+   background-color: #7d3c77;
+   padding-block: calc(var(--spacing) * 2);
+ 
+}
+
+/* .buttonlogin:hover {
+  background-color: #7d3c77;
+} */
+.email{
+  
+   padding: 14px 50px;
+    border: 2px;
+    border-radius: 9999px;
+    border: 2px solid var(--Deep-Magenta-40, #8F5A89);
+    color: #8F5A89;
+    font-weight: 500px;
+    font-size: 16px;
+     background-color: #76356E;
+}
+.password{
+  background-color: #7d3c77 ;
+  display: flex;
+  flex-direction: column;
+   gap: "10px";
+    width: "300px" ;
+} 
+.submit_btn {
+    padding: 14px 50px;
+    border-radius: 9999px;
+    border: 2px solid #8F5A89;
+    color: #FFFFFF;
+  
+    font-size: 16px;
+    background-color: #76356E;
+    text-align: center;
+    cursor: pointer;
+}
+/* 
+===================================
+Login Page End here
+=================================== 
+*/
+
+
+
+
+

@@ -1,0 +1,13 @@
+
+.buttonlogin {
+   background-color: #7d3c77;
+   padding-block: calc(var(--spacing) * 2);
+ 
+}
+
+.buttonlogin:hover {
+  background-color: #7d3c77;
+}
+.email{
+  background-color: #7d3c77 ;
+}
