@@ -1,6 +1,8 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { API_URL } from "@/app/config/api";
 
+//=====RegisterUser========//
+
 export const registerUser = createAsyncThunk(
   "auth/register",
   async (userData: any, { rejectWithValue }) => {
@@ -22,7 +24,7 @@ export const registerUser = createAsyncThunk(
     }
   }
 );
-
+//=======Login================//
 export const Login = createAsyncThunk(
   "auth/login",
   async (userData: any, { rejectWithValue }) => {
@@ -36,7 +38,7 @@ export const Login = createAsyncThunk(
       const data = await response.json();
 
       if (!response.ok) {
-        return rejectWithValue(data.message || "Registration failed");
+        return rejectWithValue(data.message || "Login  failed");
       }
       return data;
     } catch (error) {

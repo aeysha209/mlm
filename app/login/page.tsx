@@ -8,18 +8,20 @@ import { useRouter } from "next/navigation";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "../lib/auth/store";
 import { Login as loginUser } from "../lib/auth/authActions";
-
+import { cookies } from "next/headers";
 type FormValues = {
   email: string;
   password: string;
 };
-
+//email": "user@example.com",
+//"password": "Password123"//
 export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [agreedToTerms, setShowAgreeToTerms] = useState(false);
   const router = useRouter();
   const dispatch = useDispatch<AppDispatch>();
+
   const {
     register,
     handleSubmit,
@@ -36,15 +38,32 @@ export default function LoginPage() {
       email: data.email,
       password: data.password,
     };
-
     const result = await dispatch(loginUser(payload));
+
+    ///  store in cookies//
+    //    cookies().set("token",){
+    /// httpOnly:true
+    // secure: true
+    //path:"/"
+    // max: 60 * 60 * 24,
+    // };
+    // ✅ store user in localStorage
+
+
+    console.log("fff", result, payload);
+
     if (loginUser.fulfilled.match(result)) {
+      const user = result.payload.user;
+      const token = result.payload.token;
+      localStorage.setItem("user", JSON.stringify(user));
+      localStorage.setItem("token", JSON.stringify(token));
+      document.cookie = "token=${token};pathe=/;max-age=${7 * 24 * 60 };SameSite=Strict";
       alert("Login successful");
       reset();
       router.push("/dashboard");
+
     }
   };
-
   return (
     <div
       style={{
