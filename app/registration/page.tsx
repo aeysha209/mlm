@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
 import { registerUser } from "@/app/lib/auth/authActions";
-import { AppDispatch, RootState } from "../lib/auth/store";
+import { AppDispatch, RootState } from "@/app/lib/auth/store";
 import { clearAuthError } from "@/app/lib/auth/authSlice"; // Ensure this matches your slice exports
 import Link from "next/link";
 type FromValues = {

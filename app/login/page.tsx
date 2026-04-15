@@ -6,15 +6,15 @@ import { useForm } from "react-hook-form";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useDispatch } from "react-redux";
-import { AppDispatch } from "../lib/auth/store";
-import { Login as loginUser } from "../lib/auth/authActions";
+import { AppDispatch } from "@/app/lib/auth/store";
+import { Login as loginUser } from "@/app/lib/auth/authActions";
 import { cookies } from "next/headers";
+
 type FormValues = {
   email: string;
   password: string;
 };
-//email": "user@example.com",
-//"password": "Password123"//
+
 export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -62,8 +62,12 @@ export default function LoginPage() {
       reset();
       router.push("/dashboard");
 
+     
     }
   };
+
+
+
   return (
     <div
       style={{
@@ -91,7 +95,7 @@ export default function LoginPage() {
       >
         <h2 style={{ textAlign: "center", marginBottom: "10px" }}>Login</h2>
 
-        {/* Email */}
+        {/* ============Email========== */}
         <div style={{ display: "flex", flexDirection: "column" }}>
           <label>Email</label>
           <input
@@ -112,7 +116,7 @@ export default function LoginPage() {
           )}
         </div>
 
-        {/* Password */}
+        {/* ===========Password================== */}
         <div style={{ position: "relative", display: "flex", flexDirection: "column" }}>
           <label>Password</label>
           <input
@@ -148,7 +152,7 @@ export default function LoginPage() {
           )}
         </div>
 
-        {/* Submit button */}
+        {/*================Submit button============== */}
         <button
           type="submit"
           disabled={loading}

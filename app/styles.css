@@ -207,6 +207,32 @@ Login Page End here
 */
 
 
+.sidebar_nav_link{
+  color: #333333;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 8px 12px;
+  background-color: #3E9582;
+  border-radius: 10px;
+}
 
 
-
+.sidebar_nav_link.active{
+  color: #7d3c77;
+  font-weight: 500;
+  font-size: 14px;
+  background-color: #3E9582
+}
+.nav-item a:hover {
+  color:#ffffff!important;
+}
+.table thead th {
+  background-color:#8DD0AD;
+  color:black;
+}
+.table_head th{
+  font-size: 12px;
+}
+.table_head td{
+  font-size: 12px;
+}

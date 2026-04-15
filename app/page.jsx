@@ -19,16 +19,12 @@ export default function AboutPage() {
       </div>
 
       <div className="d-grid gap-2 col-2 mx-auto">
-         <Link href="/registration" className={`btn btn-primary ${Style.buttonlogin}`}  // <-- use backticks
-         
-         data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample" > 
+         <a href="/registration" className={`btn btn-primary ${Style.buttonlogin}`} > 
             registration
-         </Link>
-        <Link href="/login" className={`btn btn-primary ${Style.buttonlogin}`}  // <-- use backticks
-         
-         data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample" > 
+         </a>
+        <a href="/login" className={`btn btn-primary ${Style.buttonlogin}`}  > 
             login
-         </Link>
+         </a>
       </div>
     </div>
   );
