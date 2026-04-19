@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "@/app/lib/auth/store";
 import { Login as loginUser } from "@/app/lib/auth/authActions";
-import { cookies } from "next/headers";
+import { setAuthToken } from "@/app/lib/auth/token";
 
 type FormValues = {
   email: string;
@@ -57,7 +57,7 @@ export default function LoginPage() {
       const token = result.payload.token;
       localStorage.setItem("user", JSON.stringify(user));
       localStorage.setItem("token", JSON.stringify(token));
-      document.cookie = "token=${token};pathe=/;max-age=${7 * 24 * 60 };SameSite=Strict";
+      setAuthToken(token);
       alert("Login successful");
       reset();
       router.push("/dashboard");
